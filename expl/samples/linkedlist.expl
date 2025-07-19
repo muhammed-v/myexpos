@@ -1,0 +1,30 @@
+int main(){
+type list{
+	int num;
+	list next;
+}
+endtype
+decl
+  int i,n,num,temp1,temp2,temp3;
+  list head,node;
+enddecl
+begin
+	i=0;
+	temp = exposcall("Read", -1 ,n);
+	head=alloc();
+	node=head;
+	while(i<n) do
+	temp2= exposcall("Read",-1,num);
+	node.num=num;
+	node=node.next;
+	endwhile
+
+	i=0;
+	while(i<n) do
+	temp3= exposcall("Write",-2,head.num);
+	head=head.next;
+	endwhile;
+return 0;
+end;
+
+}
